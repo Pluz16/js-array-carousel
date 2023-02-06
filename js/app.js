@@ -42,7 +42,7 @@ leftBtnElement.addEventListener('click', function () {
 	// togliendo la classe active
 	slideCorrente.classList.remove('active')
 
-    // inremento l'indice
+    // decremento l'indice
 	indiceSlideAttiva -= 1
 
     let prossimaSlide = slideElements[indiceSlideAttiva]
