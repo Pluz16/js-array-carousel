@@ -1,11 +1,11 @@
 console.log('carousel')
 
-let slides = [
-	'./img/01.jpg',
-	'./img/02.jpg',
-	'./img/03.jpg',
-	'./img/04.jpg',
-	'./img/05.jpg',
+const slides = [
+	'img/01.jpg',
+	'img/02.jpg',
+	'img/03.jpg',
+	'img/04.jpg',
+	'img/05.jpg',
 ]
 
 let indiceSlideAttiva = 0
@@ -43,7 +43,7 @@ leftBtnElement.addEventListener('click', function () {
 	slideCorrente.classList.remove('active')
 
     // decremento l'indice
-	indiceSlideAttiva -= 1
+	indiceSlideAttiva += -1
 
     let prossimaSlide = slideElements[indiceSlideAttiva]
 	// aggiungiamo la classe active alla seconda slide
