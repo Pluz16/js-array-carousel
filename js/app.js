@@ -1,51 +1,21 @@
 console.log('carousel')
 
-const slides = [
-	'img/01.jpg',
-	'img/02.jpg',
-	'img/03.jpg',
-	'img/04.jpg',
-	'img/05.jpg',
-]
+let slides = document.querySelectorAll('.carosello .slide')
+ElementiSlides = [...slides]
 
-let indiceSlideAttiva = 0
-const slideElements = document.getElementsByClassName('slide')
-console.log(slideElements)
+console.log(ElementiSlides)
 
-const rightBtnElement = document.querySelector('.carosello__freccia.arrow-right')
-const leftBtnElement = document.querySelector('.carosello__freccia.arrow-left')
+// Recupero controlli
+const freccia_sx= document.getElementById('freccia_sx')
+const freccia_dx= document.getElementById('freccia_dx')
 
-console.log(rightBtnElement)
 
-rightBtnElement.addEventListener('click', function () {
-	console.log('current slide', indiceSlideAttiva)
-
-	let slideCorrente = slideElements[indiceSlideAttiva]
-	// togliendo la classe active
-	slideCorrente.classList.remove('active')
-
-	// inremento l'indice
-	indiceSlideAttiva += 1
-
-	let prossimaSlide = slideElements[indiceSlideAttiva]
-	// aggiungiamo la classe active alla seconda slide
-	prossimaSlide.classList.add('active')
-
-	console.log('next slide', indiceSlideAttiva)
+// Aggancio ad eventlistener
+freccia_sx.addEventListener('click', function(){
+	console.log('prev slide')
 })
 
-
-leftBtnElement.addEventListener('click', function () {
-	console.log('current slide', indiceSlideAttiva)
-
-    let slideCorrente = slideElements[indiceSlideAttiva]
-	// togliendo la classe active
-	slideCorrente.classList.remove('active')
-
-    // decremento l'indice
-	indiceSlideAttiva += -1
-
-    let prossimaSlide = slideElements[indiceSlideAttiva]
-	// aggiungiamo la classe active alla seconda slide
-	prossimaSlide.classList.add('active')
+freccia_dx.addEventListener('click', function(){
+	console.log('next slide')
 })
+
